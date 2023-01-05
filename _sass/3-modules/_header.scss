@@ -7,7 +7,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 60px $base-spacing-unit;
-  
+
     @media only screen and (max-width: $desktop) {
       padding: 40px $base-spacing-unit;
     }
@@ -29,7 +29,22 @@
 }
 
 .logo__image {
-  max-height: 50px;
+  max-height: 100px;
+}
+
+.logo__image__dark {
+  display: none;
+}
+
+.dark-mode {
+  .logo__image {
+    display: none;
+  }
+
+  .logo__image__dark {
+    display: block;
+    max-height: 100px;
+  }
 }
 
 /* Nav */
@@ -269,7 +284,7 @@
         .dropdown-menu {
           opacity: 1;
           visibility: visible;
-          transform: translate3d(0,0,0);
+          transform: translate3d(0, 0, 0);
         }
       }
 
@@ -408,7 +423,7 @@
   user-select: none;
   cursor: pointer;
   background: var(--background-alt-color);
-  
+
   &.theme-light {
     transform: none;
     cursor: auto;
